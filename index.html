@@ -1,0 +1,56 @@
+<!doctype html>
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=yes" />
+    <title>Mobile Shoppr</title>
+    <link rel='stylesheet' type="text/css" media='all and (max-width: 480px)' href='phone.css' />
+    <link rel='stylesheet' type="text/css" media='all and (min-device-width: 481px) and (max-device-width: 800px)' href='tablet.css' />
+    <link rel='stylesheet' type="text/css" media='all and (min-device-width: 801px)' href='web.css' />
+
+    <script type="text/javascript" src="http://code.jquery.com/jquery-latest.js"></script>
+    <script type="text/javascript" src="function.js"></script>
+    <script type="text/javascript" src="mobile.js"></script>
+    <script type="text/javascript">
+
+    function resizeMe(){
+        window.resizeTo(768, 1024);
+    }
+    </script>
+  </head>
+  <body onclick="resizeMe();">
+    <div class="top-highlight"></div>
+    <div id="leftContent">
+    <div id='leftContentVertStitches'></div>
+      <h1 id="title">MY LISTS</h1>
+      <div id="listPadding">
+      <form id="listForm">
+        <div class="leftCorner">
+          <div class="rightCorner">
+            <input type="submit" id="addListBtn"/>
+            <input id="listName" placeholder='ADD LIST'/>
+          </div>
+        </div>
+      </form>
+      </div>
+      
+      <ul id="prim_list">
+      </ul>
+    </div>
+    <div id="rightContent">
+      <div class="mainForm">
+      <input type="submit" id="toggleButton"/>
+        <h1 id="title">MY ITEMS</h1>
+        <form id="taskForm">
+          <div class="leftCorner">
+          <div class="rightCorner">
+            <input id="addItemBtn" type="submit" />
+            <input id="newTask" placeholder="ADD YOUR TASK HERE" />
+          </div>
+          </div>
+        </form>
+        <ul id="todoList">
+        </ul>
+      </div>
+    </div>
+  </body>
+</html>
